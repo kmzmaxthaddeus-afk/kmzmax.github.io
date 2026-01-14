@@ -1,64 +1,115 @@
-    <div class="cta">
-      <a class="btn primary" href="#sobre">Ver perfil</a>
-      <a class="btn" href="#contato">Contato</a>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KMZMAX | Membros</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="bg"></div>
+  <div class="stars"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">KZ</div>
+      <div class="brandText">
+        <div class="title">KMZMAX</div>
+        <div class="sub">Roster • membros do servidor</div>
+      </div>
     </div>
+
+    <nav class="nav">
+      <a href="#membros">Membros</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
   </header>
 
   <main class="container">
+    <section class="hero">
+      <div class="badge">⚔️ Anime Dark • Glass UI</div>
+      <h1>Membros do Servidor</h1>
+      <p>
+        Galeria com <b>foto</b>, <b>nome</b> e <b>cargos</b>.
+        Feito manualmente pra ficar bonito e fácil de manter.
+      </p>
+
+      <div class="tools">
+        <input id="search" class="search" placeholder="Pesquisar membro..." oninput="filterMembers()" />
+        <span class="count" id="count">0 membros</span>
+      </div>
+    </section>
+
+    <!-- MEMBROS -->
+    <section id="membros" class="card">
+      <div class="sectionHead">
+        <h2>👥 Membros</h2>
+        <p class="muted">Dica: coloque as imagens em <code>avatars/</code> e use <code>avatars/nome.png</code>.</p>
+      </div>
+
+      <div class="membersGrid" id="membersGrid">
+
+        <!-- ====== CARD MODELO (copie até dar 23) ====== -->
+        <article class="memberCard" data-name="thaddeus kmzmax rei imortal apostolo deus de kowloon">
+          <img class="avatar" src="avatars/thaddeus.png" alt="Thaddeus" loading="lazy" />
+          <div class="info">
+            <div class="nameRow">
+              <div class="name">Thaddeus</div>
+              <div class="tag">@kmzmax</div>
+            </div>
+            <div class="roles">
+              <span class="role">O Rei Imortal</span>
+              <span class="role">Apóstolo</span>
+              <span class="role">Deus de Kowloon</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="memberCard" data-name="membro2 user2 cargo1 cargo2">
+          <img class="avatar" src="avatars/membro2.png" alt="Membro 2" loading="lazy" />
+          <div class="info">
+            <div class="nameRow">
+              <div class="name">Membro 2</div>
+              <div class="tag">@user2</div>
+            </div>
+            <div class="roles">
+              <span class="role">Cargo 1</span>
+              <span class="role">Cargo 2</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Cole mais 21 cards aqui -->
+
+      </div>
+    </section>
+
+    <!-- SOBRE -->
     <section id="sobre" class="card">
       <h2>🌙 Sobre</h2>
-      <p>
-        Curto anime, personagens fortes, histórias intensas e estética dark.
-        Esse site é meu “hub” pessoal.
+      <p class="muted">
+        Aqui você pode escrever sobre o servidor: tema, vibe, regras rápidas, etc.
       </p>
       <div class="chips">
         <span class="chip">Fate</span>
+        <span class="chip">Lookism</span>
         <span class="chip">Jujutsu</span>
         <span class="chip">Solo Leveling</span>
-        <span class="chip">Lookism</span>
       </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2>⚡ Projetos</h2>
-        <p>Coloque aqui seus projetos/links. Exemplo:</p>
-        <ul class="list">
-          <li><a href="#" class="link">Projeto 1</a></li>
-          <li><a href="#" class="link">Projeto 2</a></li>
-          <li><a href="#" class="link">Projeto 3</a></li>
-        </ul>
-      </div>
-
-      <div class="card">
-        <h2>🧠 Status</h2>
-        <p class="muted">“Treinando no modo protagonista.”</p>
-        <div class="stats">
-          <div class="stat">
-            <span class="k">Nível</span>
-            <span class="v">↑</span>
-          </div>
-          <div class="stat">
-            <span class="k">Foco</span>
-            <span class="v">100%</span>
-          </div>
-          <div class="stat">
-            <span class="k">Build</span>
-            <span class="v">Dark</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- CONTATO -->
     <section id="contato" class="card">
       <h2>📩 Contato</h2>
-      <p>Coloque seus links aqui:</p>
+      <p class="muted">Links do servidor (sem expor e-mail):</p>
+
       <div class="contact">
-        <a class="contactItem" href="#" aria-label="Instagram">📷 Instagram</a>
-        <a class="contactItem" href="#" aria-label="TikTok">🎥 TikTok</a>
-        <a class="contactItem" href="#" aria-label="Discord">💬 Discord</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">🔗 Convite do Discord</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">📷 Instagram</a>
+        <a class="btn" href="#" target="_blank" rel="noopener">🎥 TikTok</a>
       </div>
-      <p class="tiny muted">Dica: se não quiser expor email, use só redes.</p>
     </section>
   </main>
 
@@ -69,7 +120,30 @@
   </footer>
 
   <script>
+    // ano
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // filtro simples (manual)
+    function filterMembers() {
+      const q = document.getElementById("search").value.toLowerCase().trim();
+      const cards = document.querySelectorAll(".memberCard");
+      let visible = 0;
+
+      cards.forEach(c => {
+        const hay = (c.getAttribute("data-name") || "").toLowerCase();
+        const ok = hay.includes(q);
+        c.style.display = ok ? "flex" : "none";
+        if (ok) visible++;
+      });
+
+      document.getElementById("count").textContent = visible + " membros";
+    }
+
+    // conta inicial
+    filterMembers();
   </script>
 </body>
+</html>
+
+
 
