@@ -1,51 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <title>Lucas | Site Pessoal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <header>
-    <h1>Lucas</h1>
-    <p>“O mundo não é justo, mas é interessante.”</p>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2>🌙 Sobre mim</h2>
-      <p>
-        Gosto de anime, personagens fortes, histórias intensas
-        e conceitos como Fate, poder e destino.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>⚔️ Interesses</h2>
-      <ul>
-        <li>Animes e mangás</li>
-        <li>Personagens overpower</li>
-        <li>Criação de histórias</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>📩 Contato</h2>
-      <p>Instagram: @seuuser</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2026 — Lucas</p>
-  </footer>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>KMZMAX | Anime</title>
@@ -84,5 +39,54 @@
     <section class="grid">
       <div class="card">
         <h2>⚡ Projetos</h2>
-        <p>C
-          
+        <p>Coloque aqui seus projetos/links. Exemplo:</p>
+        <ul class="list">
+          <li><a href="#" class="link">Projeto 1</a></li>
+          <li><a href="#" class="link">Projeto 2</a></li>
+          <li><a href="#" class="link">Projeto 3</a></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>🧠 Status</h2>
+        <p class="muted">“Treinando no modo protagonista.”</p>
+        <div class="stats">
+          <div class="stat">
+            <span class="k">Nível</span>
+            <span class="v">↑</span>
+          </div>
+          <div class="stat">
+            <span class="k">Foco</span>
+            <span class="v">100%</span>
+          </div>
+          <div class="stat">
+            <span class="k">Build</span>
+            <span class="v">Dark</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="card">
+      <h2>📩 Contato</h2>
+      <p>Coloque seus links aqui:</p>
+      <div class="contact">
+        <a class="contactItem" href="#" aria-label="Instagram">📷 Instagram</a>
+        <a class="contactItem" href="#" aria-label="TikTok">🎥 TikTok</a>
+        <a class="contactItem" href="#" aria-label="Discord">💬 Discord</a>
+      </div>
+      <p class="tiny muted">Dica: se não quiser expor email, use só redes.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> KMZMAX</span>
+    <span class="dot">•</span>
+    <span class="muted">feito no GitHub Pages</span>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
