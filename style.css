@@ -1,1 +1,91 @@
 
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+}
+
+header {
+  background: #1f1f1f;
+  padding: 30px;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+footer {
+  background: #1f1f1f;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #050505, #0f0f1a);
+  color: #eaeaea;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: radial-gradient(circle, #1a1a3d, #050505);
+  border-bottom: 2px solid #6a5acd;
+}
+
+header h1 {
+  font-size: 40px;
+  color: #9f8cff;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-style: italic;
+  color: #bdbdbd;
+}
+
+/* Conteúdo */
+main {
+  padding: 25px;
+}
+
+.card {
+  background: rgba(20, 20, 40, 0.8);
+  border: 1px solid #6a5acd;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px rgba(106, 90, 205, 0.3);
+}
+
+.card h2 {
+  color: #9f8cff;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 13px;
+  background: #050505;
+  color: #777;
+}
